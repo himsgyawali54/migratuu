@@ -163,7 +163,7 @@ class MyFooter extends HTMLElement {
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-3">
-            <h3><a href="index.html"><img width="150px" src="./img/migratuu-logo.webp" /></a></h3>
+            <h3><a href="index.html"><img width="150px" src="./img/migratu-logo.webp" /></a></h3>
             <p>
               We seek to provide all students, clients or companies with
               honest and accurate advice enabling them to migrate to Australia
@@ -207,7 +207,7 @@ class MyFooter extends HTMLElement {
           </div>
         </div>
         <p class="copyright">
-          Copyright @ 2023 - Migratuu- All rights reserved
+          Copyright @ 2023 - Migratu- All rights reserved
         </p>
       </div>
     </section></footer>
