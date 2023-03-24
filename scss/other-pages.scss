@@ -1,0 +1,117 @@
+#contact-us {
+  .contact-us-info {
+    .container-fluid {
+      .get-in-touch {
+        margin-bottom: 3rem;
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 4rem 15rem;
+        @media (max-width: 576px) {
+          padding: 2rem;
+        }
+
+        p {
+          color: #fff;
+          margin: 0;
+        }
+      }
+    }
+    .container {
+      .contact-row {
+        align-items: center;
+      }
+      .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 3rem;
+        justify-content: space-around;
+
+        @media (max-width: 576px) {
+          --bs-gutter-x: 1.5rem;
+          --bs-gutter-y: 1.5rem;
+        }
+
+        form {
+          input,
+          textarea {
+            margin-bottom: 1.5rem;
+            font-size: var(--h5-fontsize);
+          }
+          textarea {
+            resize: none;
+          }
+          .form-control {
+            padding: 1rem;
+          }
+        }
+        .contact-detail-card {
+          @media (min-width: 991px) {
+            margin-top: -10rem;
+          }
+          .card {
+            h3 {
+              text-align: center;
+            }
+
+            .info-row {
+              margin: 0;
+              position: relative;
+              .col-lg-10 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: var(--p-h4-fontsize);
+                b {
+                  color: rgb(114, 109, 109);
+                }
+                p {
+                  font-size: var(--h6-fontsize);
+                  color: var(--color-text);
+                  line-height: 1rem;
+                }
+              }
+
+              i {
+                font-size: var(--h2-fontsize);
+                color: var(--color-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-form {
+    background-color: var(--color-text);
+
+    .row {
+      justify-content: space-around;
+      .col-lg-3 {
+        p {
+          color: #fff;
+          font-size: var(--h5-fontsize);
+        }
+        li {
+          color: #fff;
+          list-style: none;
+          font-size: var(--h5-fontsize);
+        }
+        .social-media {
+          i {
+            font-size: var(--h2-fontsize);
+            color: var(--color-primary);
+          }
+          ul {
+            display: flex;
+            gap: 1rem;
+          }
+        }
+      }
+    }
+    .copyright {
+      color: #fff;
+      text-align: center;
+      font-size: var(--h5-fontsize);
+      padding: 2rem 0 0;
+    }
+  }
+}
