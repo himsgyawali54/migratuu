@@ -36,9 +36,6 @@ class MyHeader extends HTMLElement {
               <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blogs.html">Blogs</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="support.html">Support</a>
             </li>
             <li class="nav-item">

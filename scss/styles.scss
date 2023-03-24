@@ -6,8 +6,8 @@
   --color-primary: #ed9600;
   --color-secondary: #ffcb71;
   --color-accent: #9d6400;
-  --color-terniary: #666;
-  --color-text: #333;
+  --color-terniary: #333;
+  --color-text: #666;
   --background-color-grey: #f6f6f6;
   --card-box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.3);
   --border-radius-all: 1rem;
@@ -27,16 +27,6 @@
   margin: 0;
   padding: 0;
   font: inherit;
-}
-@mixin gutter-4-lg-5 {
-  .container > .row {
-    --bs-gutter-x: 3rem;
-    --bs-gutter-y: 3rem;
-    @media (max-width: 576px) {
-      --bs-gutter-x: 1.5rem;
-      --bs-gutter-y: 1.5rem;
-    }
-  }
 }
 
 html {
@@ -97,12 +87,19 @@ a {
   color: var(--color-primary);
   font-weight: 600;
 }
+img {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  height: auto;
+}
 .btn-all {
   display: inline-block;
   font-size: var(--p-h4-fontsize);
   background-color: var(--color-primary);
   color: #fff;
   padding: 1rem 2rem;
+  box-shadow: var(--card-box-shadow);
   width: fit-content;
   margin: auto;
   border-radius: var(--border-radius-btn);
@@ -121,23 +118,682 @@ header {
   }
 }
 .big-heading {
+  text-align: center;
   font-size: var(--h1-fontsize);
   color: var(--color-text);
   span {
     color: var(--color-primary);
   }
   + p {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
+  }
+}
+.row {
+  --bs-gutter-x: 3rem;
+  --bs-gutter-y: 3rem;
+  @media (max-width: 576px) {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
   }
 }
 .card {
   border-radius: var(--border-radius-all);
   box-shadow: var(--card-box-shadow);
+  border: none;
   .card-body {
     padding: 3rem 2rem;
   }
   .card-footer {
-    padding: 3rem 2rem;
+    border: none;
+    padding: 1.5rem 2rem;
+    background-color: rgba(12, 12, 12, 0.5);
+    border-bottom-left-radius: var(--border-radius-all);
+    border-bottom-right-radius: var(--border-radius-all);
+    color: #fff;
+    p {
+      color: #fff;
+      font-size: var(--h5-fontsize);
+    }
+  }
+}
+.index {
+  .hero {
+    background: url("../img/hero-bg-index.webp"),
+      linear-gradient(135deg, rgba(0, 0, 0, 0.35) 30%, rgba(0, 0, 0, 0) 60%);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
+    color: #fff;
+    @media (max-width: 576px) {
+      background: none;
+      background-color: var(--color-terniary);
+    }
+    .row:first-of-type {
+      padding: 6rem 0;
+      span {
+        font-size: var(--h3-fontsize);
+        color: var(--color-primary);
+      }
+      p {
+        color: #fff;
+      }
+    }
+    .row:last-of-type {
+      .card {
+        text-align: center;
+        i {
+          color: var(--color-primary);
+          font-size: clamp(3rem, 5vw, 10rem);
+        }
+        h2 {
+          margin-top: 2rem;
+          color: var(--color-primary);
+        }
+        p {
+          text-align: center;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+  .study-in-aus {
+    .row {
+      .card {
+        height: 100%;
+        &.trade-courses-card {
+          background: url("../img/study-in-aus-card-1.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.cheap-courses-card {
+          background: url("../img/study-in-aus-card-2.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.vocational-courses-card {
+          background: url("../img/study-in-aus-card-3.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.university-courses-card {
+          background: url("../img/study-in-aus-card-4.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+      }
+    }
+  }
+  .visas-to-aus {
+    .row {
+      .card {
+        height: 100%;
+        &.student-card {
+          background: url("../img/visa-to-aus-card-1.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.partner-card {
+          background: url("../img/visa-to-aus-card-2.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.graduate-card {
+          background: url("../img/visa-to-aus-card-3.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.parent-card {
+          background: url("../img/visa-to-aus-card-4.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.general-skilled-card {
+          background: url("../img/visa-to-aus-card-5.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.student-dependent-card {
+          background: url("../img/visa-to-aus-card-6.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+      }
+    }
+  }
+  .popular-cities {
+    .row {
+      .card {
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.31);
+        padding: 4rem 0;
+        &.adelaide {
+          background-image: url("../img/adelaide.webp");
+        }
+        &.brisbane {
+          background-image: url("../img/brisbane.webp");
+        }
+        &.gold-coast {
+          background-image: url("../img/gold-coast.webp");
+        }
+        &.melbourne {
+          background-image: url("../img/melbourne.webp");
+        }
+        &.perth {
+          background-image: url("../img/perth.webp");
+        }
+        &.sydney {
+          background-image: url("../img/sydney.webp");
+        }
+        &.sunshine-coast {
+          background-image: url("../img/sunshine-coast.webp");
+        }
+        &.darwin {
+          background-image: url("../img/darwin.webp");
+        }
+        &.hobart {
+          background-image: url("../img/hobart.webp");
+        }
+        h3 {
+          color: #fff;
+          font-size: var(--h2-fontsize);
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+.call-to-action {
+  text-align: center;
+  &.cta-1 {
+    background: url("../img/call-to-action-bg-1.webp");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+  &.cta-2 {
+    padding: 10rem 0;
+    background: url("../img/call-to-action-bg-2.webp");
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  h2 {
+    font-size: var(--h1-fontsize);
+    color: var(--color-primary);
+  }
+  p {
+    text-align: center;
+    color: #fff;
+    margin: 2rem 0;
+  }
+}
+.visas {
+  .hero {
+    padding: 7rem 0;
+    background-blend-mode: overlay;
+    background: url("../img/visa-hero-bg.webp") 50%,
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    text-align: center;
+    color: #fff;
+    p {
+      color: #fff;
+      @media (min-width: 991px) {
+        width: 70%;
+      }
+      margin: 3rem auto;
+      text-align: center;
+    }
+  }
+  .in-card-contents-section {
+    .row {
+      .card {
+        height: 100%;
+        text-align: center;
+        background: var(--color-primary);
+        color: #fff;
+        .card-body {
+          padding: 1rem;
+          img {
+            margin-bottom: 2rem;
+          }
+          p {
+            color: #fff;
+            text-align: center;
+            font-size: var(--h5-fontsize);
+          }
+        }
+      }
+    }
+  }
+  .how-we-help {
+    .card {
+      height: 100%;
+      text-align: center;
+      i {
+        color: var(--color-primary);
+        font-size: clamp(3rem, 5vw, 10rem);
+      }
+      h3 {
+        margin: 2rem 0;
+      }
+      p {
+        font-size: var(--h5-fontsize);
+        text-align: center;
+      }
+    }
+  }
+}
+.pathways-programs {
+  .hero {
+    padding: 7rem 0;
+    background-blend-mode: overlay;
+    background: url("../img/visa-hero-bg.webp") 50%,
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    text-align: center;
+    color: #fff;
+    p {
+      color: #fff;
+      @media (min-width: 991px) {
+        width: 70%;
+      }
+      margin: 3rem auto;
+      text-align: center;
+    }
+  }
+  .simple-4-steps .container {
+    margin: 5rem auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+  .simple-4-steps .container .center-line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: var(--color-primary);
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+  }
+  .simple-4-steps .container .row {
+    display: flex;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+  .simple-4-steps .container .row-1 {
+    justify-content: flex-start;
+  }
+  .simple-4-steps .container .row-2 {
+    justify-content: flex-end;
+  }
+  .simple-4-steps .container .row .cols {
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 5px;
+    width: calc(50% - 40px);
+    padding: 20px;
+    position: relative;
+  }
+  .simple-4-steps .container .row .cols p {
+    color: #fff;
+  }
+  .simple-4-steps .container .row .cols::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: var(--color-primary);
+    top: 28px;
+    z-index: -1;
+    transform: rotate(45deg);
+  }
+  .simple-4-steps .row-1 .cols::before {
+    right: -7px;
+  }
+  .simple-4-steps .row-2 .cols::before {
+    left: -7px;
+  }
+  .simple-4-steps .row .cols .icon,
+  .simple-4-steps .center-line .scroll-icon {
+    position: absolute;
+    background: #f2f2f2;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: var(--color-primary);
+    font-size: 17px;
+    box-shadow: 0 0 0 4px var(--color-primary),
+      inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
+  .simple-4-steps .center-line .scroll-icon {
+    bottom: 0px;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+  }
+  .simple-4-steps .row-1 .cols .icon {
+    top: 15px;
+    right: -60px;
+  }
+  .simple-4-steps .row-2 .cols .icon {
+    top: 15px;
+    left: -60px;
+  }
+  @media (width<=991px) {
+    .simple-4-steps .container .center-line {
+      left: 40px;
+    }
+    .simple-4-steps .container .row {
+      margin: 30px 0 3px 60px;
+    }
+    .simple-4-steps .container .row .cols {
+      width: 100%;
+    }
+    .simple-4-steps .row-1 .cols::before {
+      left: -7px;
+    }
+    .simple-4-steps .row-1 .cols .icon {
+      left: -60px;
+    }
+  }
+  @media (width<=576px) {
+    .simple-4-steps .container .center-line,
+    .simple-4-steps .row .cols::before,
+    .simple-4-steps .row .cols .icon {
+      display: none;
+    }
+    .simple-4-steps .container .row {
+      margin: 10px 0;
+    }
+  }
+  .find-course {
+    .card {
+      padding: 4rem 0;
+      height: 100%;
+      text-align: center;
+
+      &.card-1 {
+        background: url("../img/carpentry.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-2 {
+        background: url("../img/boat-building.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-3 {
+        background: url("../img/automotive-mechanic.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-4 {
+        background: url("../img/commercial-cookery.webp");
+
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-5 {
+        background: url("../img/heavy-diesel.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-6 {
+        background: url("../img/solid-plastering.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-7 {
+        background: url("../img/bricklaying.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-8 {
+        background: url("../img/wall-and-floor.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-9 {
+        background: url("../img/electrical-engineering.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-10 {
+        background: url("../img/automitive-body.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-11 {
+        background: url("../img/automitive-elec.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-12 {
+        background: url("../img/engineering-fabrication.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-13 {
+        background: url("../img/electrical-engineering.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-14 {
+        background: url("../img/aircondition-fri.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-15 {
+        background: url("../img/cabinet-making.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-16 {
+        background: url("../img/joinery.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      &.card-17 {
+        background: url("../img/painting-decorating.webp");
+        background-size: cover;
+        background-position: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        background-blend-mode: overlay;
+        background-repeat: no-repeat;
+      }
+      h3 {
+        font-size: var(--h2-fontsize);
+        margin-bottom: 2rem;
+        color: #fff;
+      }
+    }
+  }
+}
+.study-in-aus-main {
+  .hero {
+    padding: 7rem 0;
+    background-blend-mode: overlay;
+    background: url("../img/visa-hero-bg.webp") 50%,
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    text-align: center;
+    color: #fff;
+    p {
+      color: #fff;
+      @media (min-width: 991px) {
+        width: 70%;
+      }
+      margin: 3rem auto;
+      text-align: center;
+    }
+  }
+  .study-in-aus {
+    .row {
+      .card {
+        height: 100%;
+        &.trade-courses-card {
+          background: url("../img/study-in-aus-card-1.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.cheap-courses-card {
+          background: url("../img/study-in-aus-card-2.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.vocational-courses-card {
+          background: url("../img/study-in-aus-card-3.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+        &.university-courses-card {
+          background: url("../img/study-in-aus-card-4.webp");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-blend-mode: normal;
+        }
+      }
+    }
+  }
+  .why-australia {
+    .col {
+      text-align: center;
+      i {
+        font-size: clamp(3rem, 5vw, 10rem);
+        color: var(--color-primary);
+      }
+      h3 {
+        margin: 2rem;
+        font-size: var(--h2-fontsize);
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+.about-us {
+  .hero {
+    padding: 7rem 0;
+    background-blend-mode: overlay;
+    background: url("../img/visa-hero-bg.webp") 50%,
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    text-align: center;
+    color: #fff;
+    p {
+      color: #fff;
+      @media (min-width: 991px) {
+        width: 70%;
+      }
+      margin: 3rem auto;
+      text-align: center;
+    }
+  }
+}
+.enroll-now {
+  .hero {
+    padding: 7rem 0;
+    background-blend-mode: overlay;
+    background: url("../img/visa-hero-bg.webp") 50%,
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    text-align: center;
+    color: #fff;
+    p {
+      color: #fff;
+      @media (min-width: 991px) {
+        width: 70%;
+      }
+      margin: 3rem auto;
+      text-align: center;
+    }
   }
 }
