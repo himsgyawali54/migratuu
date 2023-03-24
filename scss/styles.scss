@@ -107,7 +107,6 @@ img {
   font-weight: 500;
 }
 header {
-  padding: 1rem 0;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
   nav {
     .nav-item {
@@ -356,7 +355,6 @@ header {
         @media (max-width: 576px) {
           padding: 2rem;
         }
-
         p {
           color: #fff;
           margin: 0;
@@ -429,7 +427,9 @@ header {
   }
   .footer-form {
     background-color: var(--color-text);
-
+    h3 {
+      color: #fff;
+    }
     .row {
       justify-content: space-around;
       .col-lg-3 {
