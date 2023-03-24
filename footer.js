@@ -1,7 +1,8 @@
 class MyFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = ` 
-      <footer id="contact-us">      <section class="contact-us-info">
+      <footer id="contact-us">      
+      <section class="contact-us-info">
       <div class="container-fluid">
         <div class="row get-in-touch">
           <h2>GET IN TOUCH</h2>
@@ -83,7 +84,7 @@ class MyFooter extends HTMLElement {
               name="Message"
               class="form-control"
               placeholder="Message"
-              rows="6"
+              rows="5"
             ></textarea>
 
             <button class="btn-all" type="submit">Submit</button>
@@ -94,7 +95,7 @@ class MyFooter extends HTMLElement {
                 <h2>CONTACT DETAILS</h2>
                 <div class="row info-row">
                   <div class="col-2 col-lg-2">
-                    <a href="#" class="stretched-link"
+                    <a href="tel:+9779823430360" class="stretched-link"
                       ><i class="bi bi-telephone"></i
                     ></a>
                   </div>
@@ -105,9 +106,8 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="row info-row">
                   <div class="col-2 col-lg-2">
-                    <a href="#" class="stretched-link"
-                      ><i class="bi bi-messenger"></i
-                    ></a>
+                    <i class="bi bi-messenger"></i
+                    >
                   </div>
                   <div class="col-9 col-lg-10">
                     <h4>Chat Via Messenger</h4>
@@ -115,9 +115,8 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="row info-row">
                   <div class="col-2 col-lg-2">
-                    <a href="#" class="stretched-link"
-                      ><i class="bi bi-whatsapp"></i
-                    ></a>
+                    <i class="bi bi-whatsapp"></i
+                    >
                   </div>
                   <div class="col-9 col-lg-10">
                     <h4>Chat Via Whatsapp</h4>
@@ -125,7 +124,7 @@ class MyFooter extends HTMLElement {
                 </div>
                 <div class="row info-row">
                   <div class="col-2 col-lg-2">
-                    <a href="#" class="stretched-link"
+                    <a href="mailto:info@migratuu.com" class="stretched-link"
                       ><i class="bi bi-envelope"></i
                     ></a>
                   </div>
@@ -145,9 +144,8 @@ class MyFooter extends HTMLElement {
 
                 <div class="row info-row">
                   <div class="col-2 col-lg-2">
-                    <a href="#" class="stretched-link"
-                      ><i class="bi bi-geo-alt"></i
-                    ></a>
+                    <i class="bi bi-geo-alt"></i
+                    >
                   </div>
                   <div class="col-9 col-lg-10">
                     <h4>TUNG CHOI STREET, MONGKOK,</h4>
@@ -165,7 +163,7 @@ class MyFooter extends HTMLElement {
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-3">
-            <h3><a href="#">Migratuu</a></h3>
+            <h3><a href="index.html"><img width="150px" src="./img/migratuu-logo.webp" /></a></h3>
             <p>
               We seek to provide all students, clients or companies with
               honest and accurate advice enabling them to migrate to Australia
@@ -173,14 +171,14 @@ class MyFooter extends HTMLElement {
             </p>
           </div>
           <div class="col-12 col-lg-3">
-            <h3><a href="#">Company</a></h3>
+            <h3>Company</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Pathway Programs</a></li>
-              <li><a href="#">Visas</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Support</a></li>
-              <li><a href="#">Enroll</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="pathways-programs.html">Pathway Programs</a></li>
+              <li><a href="visas.html">Visas</a></li>
+              <li><a href="about.html">About US</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="enroll-now.html">Enroll Now</a></li>
             </ul>
             <!-- <div class="social-media">
               <ul>
@@ -200,11 +198,11 @@ class MyFooter extends HTMLElement {
             </div> -->
           </div>
           <div class="col-12 col-lg-3">
-            <h3><a href="#">Contact</a></h3>
+            <h3>Contact</h3>
             <ul>
-              <li><a href="#">Nepal: 9823430360</a></li>
-
-              <li><a href="#">Email: rajnitabhetwal10@gmail.com</a></li>
+              <li><a href="tel:+9779823430360">Nepal: 9823430360</a></li>
+              <li><a href="mailto:info@migratuu.com">Email: info@migratuu.com</a></li>
+              <li><a href="mailto:rajnitabhetwal10@gmail.com">Email: rajnitabhetwal10@gmail.com</a></li>
             </ul>
           </div>
         </div>

@@ -4,7 +4,7 @@ class MyHeader extends HTMLElement {
     <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="index.html">Migratuu</a>
+        <a class="navbar-brand" href="index.html"><img width="130px" src="./img/migratuu-logo.webp" /></a>
         <button
           class="navbar-toggler"
           type="button"
